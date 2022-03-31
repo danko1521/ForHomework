@@ -11,7 +11,7 @@ directories = {
 }
 
 
-def check_document_existance(user_doc_number):
+def check_document_existance(user_doc_number):                             #
     doc_founded = False
     for current_document in documents:
         doc_number = current_document['number']
@@ -64,9 +64,8 @@ def append_doc_to_shelf(doc_number, shelf_number):
     directories[shelf_number].append(doc_number)
 
 
-def delete_doc():
-    user_doc_number = input('Введите номер документа - ')                       #
-    doc_exist = check_document_existance(user_doc_number)
+def delete_doc(user_doc_number):
+    doc_exist = check_document_existance(user_doc_number)                #
     if doc_exist:
         for current_document in documents:
             doc_number = current_document['number']
@@ -106,11 +105,7 @@ def show_all_docs_info():
         show_document_info(current_document)
 
 
-def add_new_doc():
-    new_doc_number = input('Введите номер документа - ')                      #
-    new_doc_type = input('Введите тип документа - ')
-    new_doc_owner_name = input('Введите имя владельца документа- ')
-    new_doc_shelf_number = input('Введите номер полки для хранения - ')
+def add_new_doc(new_doc_number, new_doc_type, new_doc_owner_name, new_doc_shelf_number):
     new_doc = {
         "type": new_doc_type,
         "number": new_doc_number,
