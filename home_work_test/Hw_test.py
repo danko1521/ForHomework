@@ -65,7 +65,7 @@ def append_doc_to_shelf(doc_number, shelf_number):
 
 
 def delete_doc():
-    user_doc_number = input('Введите номер документа - ')
+    user_doc_number = input('Введите номер документа - ')                       #
     doc_exist = check_document_existance(user_doc_number)
     if doc_exist:
         for current_document in documents:
@@ -107,7 +107,7 @@ def show_all_docs_info():
 
 
 def add_new_doc():
-    new_doc_number = input('Введите номер документа - ')
+    new_doc_number = input('Введите номер документа - ')                      #
     new_doc_type = input('Введите тип документа - ')
     new_doc_owner_name = input('Введите имя владельца документа- ')
     new_doc_shelf_number = input('Введите номер полки для хранения - ')
